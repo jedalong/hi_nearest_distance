@@ -1,0 +1,105 @@
+{
+  "settings": [
+    {
+      "id": "r",
+      "name": "Radius for distance analysis",
+      "description": "The radius parameter is used to determine a threshold distance, which is used to determine when fixes are within a given distance of features. The radius parameter only impacts the artefact outputs. Unit: same unit as input CRS.",
+      "defaultValue": 100,
+      "type": "INTEGER"
+    },
+    {
+      "id": "key",
+      "name": "OSM Key",
+      "description": "OSM key class, as a string. Default is highway. For more information see the OSM Wiki page and the documentation.",
+      "defaultValue": "highway",
+      "type": "STRING"
+    },
+    {
+      "id": "value",
+      "name": "OSM value",
+      "description": "OSM value tag, as a string. Default is to use all values for a specified key, but the user can choose specific value tags for more targeted analysis. For more information see the OSM Wiki page and the documentation.",
+      "defaultValue": "all",
+      "type": "STRING"
+    },
+    {
+      "id": "geom",
+      "name": "Geometry of focus.",
+      "description": "geometry type to focus on, one of (point, line, polygon).",
+      "defaultValue": "line",
+      "type": "RADIOBUTTONS",
+      "options": [
+        {
+          "value": "point",
+          "displayText": "point"
+        },
+        {
+          "value": "line",
+          "displayText": "line"
+        },
+        {
+          "value": "polygon",
+          "displayText": "polygon"
+        }
+      ]
+    },
+    {
+      "id": "poly2line",
+      "name": "Convert polygons to lines",
+      "description": "used to convert polygon features to lines, useful when studying distance-to-boundary problems.",
+      "defaultValue": true,
+      "type": "CHECKBOX"
+    }
+  ],
+  
+  
+  "dependencies": {
+    "R": [
+      {"name": "move"},
+      {"name": "sf"},
+      {"name": "osmdata"},
+      {"name": "ggplot2"},
+      {"name": "units"},
+      {"name": "devtools"}
+    ]
+  },
+  "createsArtifacts": true,
+  "license": {
+    "key": "MIT"
+  },
+  "language": "eng",
+  "keywords": [
+    "human infrastructure",
+    "GIS"
+  ],
+  "people": [
+    {
+      "firstName": "Jed",
+      "middleInitials": null,
+      "lastName": "Long",
+      "email": "jed.long@uwo.ca",
+      "roles": [
+        "author",
+        "creator"
+      ],
+      "orcid": "0000-0003-3961-3085",
+      "affiliation": "Western University",
+      "affiliationRor": "02grkyz14"
+    }
+  ],
+  "funding": [
+    {
+      "name": "NSERC",
+      "comment": "Discovery Grant"
+    }
+  ],
+  "references": [
+    {
+      "type": "IsDescribedBy",
+      "note": "Darwin, C. 1900. The creation. Journal XY. 1-2",
+      "url": "https://anylink.xyz"
+    }
+  ],
+  "documentation": {
+    "url": "https://github.com/jedalong/MoveApps/HI_distance_analysis/README.md"
+  }
+}
