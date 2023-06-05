@@ -4,6 +4,7 @@ library('osmdata')
 library('devtools')
 library('ggplot2')
 library('units')
+library('mapview')
 devtools::install_github('jedalong/wildlifeHI')
 library('wildlifeHI')
 
