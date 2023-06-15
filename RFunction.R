@@ -1,11 +1,9 @@
 library('move')
 library('sf')
 library('osmdata')
-library('devtools')
 library('ggplot2')
 library('units')
-devtools::install_github('jedalong/wildlifeHI')
-library('wildlifeHI')
+library('wildlifeHI') #github('jedalong/wildlifeHI')
 
 rFunction = function(data,r=r,key=key,value=value,geom=geom,poly2line=poly2line) {
   
