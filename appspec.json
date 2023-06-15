@@ -58,8 +58,7 @@
       {"name": "sf"},
       {"name": "osmdata"},
       {"name": "ggplot2"},
-      {"name": "units"},
-      {"name": "devtools"}
+      {"name": "units"}
     ]
   },
   "createsArtifacts": true,
@@ -90,13 +89,6 @@
     {
       "name": "NSERC",
       "comment": "Discovery Grant"
-    }
-  ],
-  "references": [
-    {
-      "type": "IsDescribedBy",
-      "note": "Darwin, C. 1900. The creation. Journal XY. 1-2",
-      "url": "https://anylink.xyz"
     }
   ],
   "documentation": {
