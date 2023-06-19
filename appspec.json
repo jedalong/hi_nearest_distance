@@ -92,14 +92,7 @@
       "comment": "Discovery Grant"
     }
   ],
-  "references": [
-    {
-      "type": "IsDescribedBy",
-      "note": "Darwin, C. 1900. The creation. Journal XY. 1-2",
-      "url": "https://anylink.xyz"
-    }
-  ],
   "documentation": {
-    "url": "https://github.com/jedalong/MoveApps/HI_distance_analysis/README.md"
+    "url": "https://github.com/jedalong/hi_nearest_distance/README.md"
   }
 }

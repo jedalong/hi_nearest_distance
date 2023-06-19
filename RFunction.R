@@ -5,20 +5,20 @@ library('devtools')
 library('ggplot2')
 library('units')
 library('mapview')
-devtools::install_github('jedalong/wildlifeHI')
+#devtools::install_github('jedalong/wildlifeHI')
 library('wildlifeHI')
 
 rFunction = function(data,r=r,key=key,value=value,geom=geom,poly2line=poly2line) {
   
-  #check input data type
-  if (class(data) != 'MoveStack'){
-    if (class(data) == 'Move'){
-      data <- moveStack(data, forceTz='UTC')
-    } else {
-      print('Input Data not of class MoveStack. Returning null object.')
-      return(NULL)
-    }
-  }
+  # #check input data type
+  # if (class(data) != 'MoveStack'){
+  #   if (class(data) == 'Move'){
+  #     data <- moveStack(data, forceTz='UTC')
+  #   } else {
+  #     print('Input Data not of class MoveStack. Returning null object.')
+  #     return(NULL)
+  #   }
+  # }
   
   if (value == 'all'){
     move_dist <- hi_distance(move=data,key=key,geom=geom,poly2line=poly2line)
