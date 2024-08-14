@@ -5,6 +5,10 @@ source("src/io/app_files.R")
 source("src/io/io_handler.R")
 source("src/io/rds.R")
 
+# `./RFunction.R` is the home of your app code
+# It is the only file which will be bundled into the final app on MoveApps
+source("RFunction.R")
+
 # simulate an app run on moveapps.org
 simulateMoveAppsRun <- function(args) {
     tryCatch(

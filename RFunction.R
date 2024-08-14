@@ -1,4 +1,4 @@
-library('move')
+library('move2')
 library('sf')
 library('osmdata')
 library('devtools')
@@ -10,16 +10,7 @@ library('wildlifeHI')
 
 rFunction = function(data,r=r,key=key,value=value,geom=geom,poly2line=poly2line) {
   
-  # #check input data type
-  # if (class(data) != 'MoveStack'){
-  #   if (class(data) == 'Move'){
-  #     data <- moveStack(data, forceTz='UTC')
-  #   } else {
-  #     print('Input Data not of class MoveStack. Returning null object.')
-  #     return(NULL)
-  #   }
-  # }
-  
+  #call hi_dostance from package
   if (value == 'all'){
     move_dist <- hi_distance(move=data,key=key,geom=geom,poly2line=poly2line)
   } else {
@@ -30,8 +21,8 @@ rFunction = function(data,r=r,key=key,value=value,geom=geom,poly2line=poly2line)
   units(r) <- units(move_dist$nearest_distance)
   
   move_df <- data.frame(move_dist)
-  move_df$timestamp <- timestamps(move_dist)
-  move_df$trackId <- trackId(move_dist)
+  move_df$timestamp <- mt_time(move_dist)
+  move_df$trackId <- mt_track_id(move_dist)
   
   #Distance Plot
   pdfName <- paste0('DistanceAnalysisPlot_r_',r,'.pdf')
@@ -53,3 +44,4 @@ rFunction = function(data,r=r,key=key,value=value,geom=geom,poly2line=poly2line)
   #return movestack
   return(move_dist)
 }
+

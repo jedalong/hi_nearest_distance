@@ -1,0 +1,7 @@
+{
+    "r": 50,
+    "key": "building",
+    "value": "all",
+    "geom": "polygon",
+    "poly2line": "TRUE"
+}

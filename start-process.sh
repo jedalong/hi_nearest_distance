@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 ########################################################################################################################
-# calls the co-pilot-r SDK entry point
+# calls the SDK entry point
 ########################################################################################################################
 set -o errexit
 set -o pipefail
 set -o nounset
 
-Rscript co-pilot-sdk.R
+Rscript sdk.R
