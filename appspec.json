@@ -58,8 +58,7 @@
       {"name": "sf"},
       {"name": "osmdata"},
       {"name": "ggplot2"},
-      {"name": "units"},
-      {"name": "devtools"}
+      {"name": "units"}
     ]
   },
   "createsArtifacts": true,
